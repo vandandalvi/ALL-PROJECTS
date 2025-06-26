@@ -77,9 +77,9 @@
             overflow: hidden;
             transition: all 0.4s ease;
             position: relative;
-            height: 200px;
             display: flex;
             flex-direction: column;
+            min-height: 200px;
         }
 
         .project-card:hover {
@@ -107,6 +107,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 100%;
         }
 
         .card-icon {
@@ -247,6 +248,23 @@
             background: linear-gradient(135deg, rgba(255, 200, 87, 0.1), rgba(255, 200, 87, 0.3));
         }
 
+        /* Highlight for SOLVING REAL-WORLD PROBLEMS */
+        .problem-badge {
+            display: inline-block;
+            background: var(--warning-color);
+            color: #fff;
+            font-weight: bold;
+            padding: 0.1em 0.5em;
+            border-radius: 6px;
+            font-size: 0.85em;
+            margin-left: 0.3em;
+            letter-spacing: 0.5px;
+        }
+
+        .problem-badge-nowrap {
+            white-space: nowrap;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .projects-grid {
@@ -263,7 +281,7 @@
             }
 
             .project-card {
-                height: 180px;
+                min-height: 160px;
             }
 
             .card-icon {
@@ -286,8 +304,7 @@
             }
 
             .project-card {
-                height: auto;
-                min-height: 160px;
+                min-height: 140px;
             }
 
             .header h1 {
@@ -334,7 +351,7 @@
                 <div>
                     <i class="fa-solid fa-book-open-reader card-icon"></i>
                     <h2 class="card-title">Tech Match</h2>
-                    <p class="card-description">Find Fav Tech Career using ML(SOLVING REAL-WORLD PROBLEMS)</p>
+                    <p class="card-description">Find Fav Tech Career using ML <span class="problem-badge-nowrap">(<span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span>)</span></p>
                 </div>
                 <a href="#" class="card-link"
                     onclick="handleClick(event, 'https://vandandalvi.github.io/ML-PROJECT-/Miniproject/1pg.html')">
@@ -363,7 +380,7 @@
                 <div>
                     <i class="fa-solid fa-camera-retro card-icon"></i> <!-- Changed icon -->
                     <h2 class="card-title">SnapSoul</h2>
-                    <p class="card-description">Capture your Memories (SOLVING REAL-WORLD PROBLEMS)</p>
+                    <p class="card-description">Capture your Memories <span class="problem-badge-nowrap">(<span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span>)</span></p>
                 </div>
                 <a href="#" class="card-link" onclick="handleClick(event, 'https://snapsoul.vercel.app/')">
                     Open SnapSoul
@@ -377,7 +394,7 @@
         <div>
             <i class="fa-solid fa-map-location-dot card-icon"></i>
             <h2 class="card-title">Live Flat Prices Across Mumbai</h2>
-            <p class="card-description">Explore area-wise real-time flat rates using an interactive city map.(SOLVING REAL-WORLD PROBLEMS)</p>
+            <p class="card-description">Explore area-wise real-time flat rates using an interactive city map. <span class="problem-badge-nowrap">(<span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span>)</span></p>
         </div>
         <a href="#" class="card-link" onclick="handleClick(event, 'https://mumbai1bhk.vercel.app/')">
             View Map
@@ -391,7 +408,7 @@
                 <div>
                     <i class="fa-solid fa-camera card-icon"></i>
                     <h2 class="card-title">IMAGE OCR</h2>
-                    <p class="card-description">Place your cam in front of question get instant AI gen ANSWER.(SOLVING REAL-WORLD PROBLEMS)</p>
+                    <p class="card-description">Place your cam in front of question get instant AI gen ANSWER. <span class="problem-badge-nowrap">(<span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span>)</span></p>
                 </div>
                 <a href="#" class="card-link" onclick="handleClick(event, 'https://image-ocr-1.onrender.com/')">
                     Open Map
