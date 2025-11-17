@@ -1,6 +1,6 @@
 # My Projects Hub ~evrything at one place
 
-This project is a single-page HTML portfolio that showcases a collection of all my web projects developed over 4 years of study.g
+This project is a single-page HTML portfolio that showcases a collection of all my web projects developed over 4 years of study.gfg
 
 ## Why a Single HTML File?
 - **Centralized Showcase:** I wanted a single, easy-to-share page where anyone can browse all my major and mini-projects at once.
