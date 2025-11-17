@@ -19,4 +19,4 @@ This project is a single-page HTML portfolio that showcases a collection of all 
 - You can update icons, links, and descriptions as your portfolio grows.
 
 ## License
-This project is for personal/portfolio use. Feel free to use the structure for your own project collections!c
+This project is for personal/portfolio use. Feel free to use the structure for your own project collections!
