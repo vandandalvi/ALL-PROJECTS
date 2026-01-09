@@ -142,6 +142,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            margin-top: 1rem;
         }
 
         .card-link:hover {
@@ -252,18 +253,21 @@
         /* Highlight for SOLVING REAL-WORLD PROBLEMS */
         .problem-badge {
             display: inline-block;
-            background: var(--warning-color);
+            background: linear-gradient(135deg, #10b981, #059669);
             color: #fff;
-            font-weight: bold;
-            padding: 0.1em 0.5em;
+            font-weight: 600;
+            padding: 0.3em 0.8em;
             border-radius: 6px;
-            font-size: 0.85em;
-            margin-left: 0.3em;
-            letter-spacing: 0.5px;
+            font-size: 0.65em;
+            margin-top: 0.3em;
+            letter-spacing: 0.3px;
+            box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
+            text-transform: uppercase;
         }
 
-        .problem-badge-nowrap {
-            white-space: nowrap;
+        .problem-badge-container {
+            display: block;
+            margin-top: 0.6rem;
         }
 
         /* Responsive Design */
@@ -358,7 +362,7 @@
                 border-radius: 1.2em;
                 box-shadow: 0 2px 12px 0 rgba(72, 0, 139, 0.13);
                 transition: transform 0.15s, box-shadow 0.15s;
-                margin: 0.7em 0 0 0;
+                margin: 0.7em 0.5em 0 0;
                 letter-spacing: 0.03em;
             "
            onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 16px 0 rgba(72,0,139,0.18)';"
@@ -367,16 +371,55 @@
             <i class="fab fa-github" style="font-size: 1.3em; margin-right: 0.5em; vertical-align: middle;"></i>
             <span style="vertical-align: middle;">GitHub</span>
         </a>
+        <a href="https://www.linkedin.com/in/vandandalvi/" target="_blank" 
+           style="
+                display: inline-flex;
+                align-items: center;
+                background: linear-gradient(90deg, #0077b5 0%, #00a0dc 100%);
+                color: #fff;
+                text-decoration: none;
+                font-size: 1em;
+                font-weight: 600;
+                padding: 0.4em 1em;
+                border-radius: 1.2em;
+                box-shadow: 0 2px 12px 0 rgba(0, 119, 181, 0.13);
+                transition: transform 0.15s, box-shadow 0.15s;
+                margin: 0.7em 0 0 0;
+                letter-spacing: 0.03em;
+            "
+           onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 16px 0 rgba(0,119,181,0.25)';"
+           onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px 0 rgba(0,119,181,0.13)';"
+        >
+            <i class="fab fa-linkedin" style="font-size: 1.3em; margin-right: 0.5em; vertical-align: middle;"></i>
+            <span style="vertical-align: middle;">LinkedIn</span>
+        </a>
     </p>
     </header>
 
     <main class="projects-grid">
+        <div class="project-card" data-url="talkitoai">
+            <div class="card-content">
+                <div>
+                    <i class="fa-solid fa-microphone-lines card-icon"></i>
+                    <h2 class="card-title">TalkitoAI 🚧</h2>
+                    <p class="card-description">AI-powered interview platform with human-voice interviewer, real-time behavior analytics, and brutally honest feedback to prepare you for real interviews.</p>
+                    <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
+                </div>
+                <a href="#" class="card-link" onclick="handleClick(event, 'https://demotalkito.vercel.app/')"
+                    style="background: linear-gradient(to right, #ff6b6b, #ee5a6f);">
+                    View Demo (Under Construction)
+                    <span class="loader"></span>
+                </a>
+            </div>
+        </div>
+
         <div class="project-card" data-url="techmatch.html">
             <div class="card-content">
                 <div>
                     <i class="fa-solid fa-book-open-reader card-icon"></i>
                     <h2 class="card-title">Tech Match</h2>
-                    <p class="card-description">Find Fav Tech Career using ML <span class="problem-badge-nowrap"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span></p>
+                    <p class="card-description">AI-powered career recommendation system that matches your skills and interests with the perfect tech career path using machine learning algorithms.</p>
+                    <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
                 </div>
                 <a href="#" class="card-link"
                     onclick="handleClick(event, 'https://vandandalvi.github.io/ML-PROJECT-/Miniproject/1pg.html')">
@@ -391,10 +434,25 @@
                 <div>
                     <i class="fa-solid fa-cart-shopping card-icon"></i>
                     <h2 class="card-title">Vandan's Ecom</h2>
-                    <p class="card-description">Handpicked Product, Hassle-Free Shipping</p>
+                    <p class="card-description">Modern e-commerce platform featuring handpicked products, seamless shopping experience, and hassle-free shipping for your convenience.</p>
                 </div>
                 <a href="#" class="card-link" onclick="handleClick(event, 'https://tinyurl.com/cd8pcsce')">
                     Open Shop
+                    <span class="loader"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card" data-url="urban-price-radar">
+            <div class="card-content">
+                <div>
+                    <i class="fa-solid fa-map-marked-alt card-icon"></i>
+                    <h2 class="card-title">Urban Price Radar</h2>
+                    <p class="card-description">Transparent property price mapping across Maharashtra with honest price bands and weekly automated updates to help you make informed decisions.</p>
+                    <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
+                </div>
+                <a href="#" class="card-link" onclick="handleClick(event, 'https://urban-price-radar.vercel.app/')">
+                    Explore Map
                     <span class="loader"></span>
                 </a>
             </div>
@@ -405,7 +463,8 @@
                 <div>
                     <i class="fa-solid fa-camera-retro card-icon"></i> <!-- Changed icon -->
                     <h2 class="card-title">SnapSoul</h2>
-                    <p class="card-description">Capture your Memories <span class="problem-badge-nowrap"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span></p>
+                    <p class="card-description">Social media platform designed for photographers and memory keepers to capture, share, and preserve precious moments with beautiful galleries.</p>
+                    <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
                 </div>
                 <a href="#" class="card-link" onclick="handleClick(event, 'https://snapsoul.vercel.app/')">
                     Open SnapSoul
@@ -419,7 +478,8 @@
                 <div>
                     <i class="fa-solid fa-file-shield card-icon"></i>
                     <h2 class="card-title">ClaimSense</h2>
-                    <p class="card-description">AI-powered insurance claim management (Prototype) <span class="problem-badge-nowrap"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span></p>
+                    <p class="card-description">AI-powered insurance claim management prototype that streamlines the claim process with intelligent automation and real-time tracking.</p>
+                    <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
                 </div>
                 <a href="#" class="card-link" onclick="handleClick(event, 'https://insurance-claim-genai.vercel.app/login')">
                     Open ClaimSense
@@ -433,7 +493,8 @@
         <div>
             <i class="fa-solid fa-map-location-dot card-icon"></i>
             <h2 class="card-title">Mumbai Live PriceMap</h2>
-            <p class="card-description">Explore area-wise real-time flat rates using an interactive city map. <span class="problem-badge-nowrap"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span></p>
+            <p class="card-description">Interactive city map showcasing real-time flat rates across Mumbai areas to help homebuyers explore property prices at a glance.</p>
+            <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
         </div>
         <a href="#" class="card-link" onclick="handleClick(event, 'https://mumbai1bhk.vercel.app/')">
             View Map
@@ -447,7 +508,8 @@
                 <div>
                     <i class="fa-solid fa-camera card-icon"></i>
                     <h2 class="card-title">IMAGE OCR</h2>
-                    <p class="card-description">Place your cam in front of question get instant AI gen ANSWER. <span class="problem-badge-nowrap"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span></p>
+                    <p class="card-description">Camera-based OCR solution that instantly recognizes text from images and provides AI-generated answers to questions in real-time.</p>
+                    <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
                 </div>
                 <a href="#" class="card-link" onclick="handleClick(event, 'https://image-ocr-1.onrender.com/')">
                     Open Cam
@@ -461,7 +523,8 @@
         <div>
             <i class="fas fa-university card-icon"></i> <!-- Bank building icon -->
             <h2 class="card-title">Smart AI Bank Transaction Analyzer</h2>
-            <p class="card-description">Take control of your finances with intelligent insights, automated categorization,Chat and AI-powered analysis.</p>
+            <p class="card-description">Intelligent financial management tool with automated transaction categorization, AI-powered insights, and interactive chat for better money control.</p>
+            <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
         </div>
         <a href="#" class="card-link"
             onclick="handleClick(event, 'https://aifinanceadvisor-jcw3p0gjj-vandandalvis-projects.vercel.app/')">
@@ -476,7 +539,8 @@
         <div>
             <i class="fas fa-file-invoice card-icon"></i> <!-- Invoice document icon -->
             <h2 class="card-title">Invoice Gen</h2>
-            <p class="card-description">Customizable Invoice Gen with Analytics Easy to use App for small businesses and vendors. <span class="problem-badge-nowrap"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span></p>
+            <p class="card-description">Customizable invoice generator with built-in analytics designed for small businesses and vendors to streamline billing and track payments.</p>
+            <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
         </div>
         <a href="#" class="card-link"
             onclick="handleClick(event, 'https://vandansinvoicegen.vercel.app/')">
@@ -492,7 +556,7 @@
                 <div>
                     <i class="fas fa-brush card-icon"></i>
                     <h2 class="card-title">Image Editor</h2>
-                    <p class="card-description">Edit and enhance your images with powerful tools</p>
+                    <p class="card-description">Professional-grade image editing tool with powerful filters, adjustments, and effects to enhance and transform your photos effortlessly.</p>
                 </div>
                 <a href="#" class="card-link"
                     onclick="handleClick(event, 'https://vandandalvi.github.io/My-projects/image-resizer-main-20241117T092635Z-001/image-resizer-main/imagedit.html')">
@@ -507,7 +571,7 @@
                 <div>
                     <i class="fas fa-language card-icon"></i>
                     <h2 class="card-title">Language Translator</h2>
-                    <p class="card-description">Translate text between multiple languages instantly</p>
+                    <p class="card-description">Fast and accurate multilingual translation tool supporting multiple languages with instant results for seamless global communication.</p>
                 </div>
                <a href="#" class="card-link"
                     onclick="handleClick(event, 'https://vandandalvi.github.io/My-projects/image-resizer-main-20241117T092635Z-001/image-resizer-main/translator.html')">
@@ -523,7 +587,7 @@
                 <div>
                     <i class="fas fa-image card-icon"></i>
                     <h2 class="card-title">Image Resizer</h2>
-                    <p class="card-description">Resize and optimize your images quickly and easily</p>
+                    <p class="card-description">Quick and efficient image resizing tool with optimization features to reduce file size while maintaining quality for web and mobile use.</p>
                 </div>
                  <a href="#" class="card-link"
                     onclick="handleClick(event, 'https://vandandalvi.github.io/My-projects/image-resizer-main-20241117T092635Z-001/image-resizer-main/index.html')">
@@ -538,7 +602,7 @@
                 <div>
                     <i class="fa-solid fa-cloud-sun card-icon"></i>
                     <h2 class="card-title">Weather Forecast</h2>
-                    <p class="card-description">Get real-time weather updates</p>
+                    <p class="card-description">Real-time weather application providing accurate forecasts, current conditions, and detailed weather information for locations worldwide.</p>
                 </div>
                 <a href="#" class="card-link"
                     onclick="handleClick(event, 'https://vandandalvi.github.io/weatherApp/wetherapp/weatherapp.html')">
@@ -553,7 +617,7 @@
                 <div>
                     <i class="fas fa-file-alt card-icon"></i>
                     <h2 class="card-title">File Details Checker</h2>
-                    <p class="card-description">View detailed information about your files</p>
+                    <p class="card-description">Comprehensive file analysis tool that displays detailed metadata, properties, and information about any file type instantly.</p>
                 </div>
                 <a href="#" class="card-link"
                     onclick="handleClick(event, 'https://vandandalvi.github.io/My-projects/image-resizer-main-20241117T092635Z-001/image-resizer-main/filecheck.html')">
@@ -568,7 +632,7 @@
                 <div>
                     <i class="fas fa-utensils card-icon"></i>
                     <h2 class="card-title">Food Calorie</h2>
-                    <p class="card-description">Track and calculate calories in your meals</p>
+                    <p class="card-description">Nutrition tracking application to calculate and monitor calorie intake, helping you maintain a healthy diet and achieve fitness goals.</p>
                 </div>
                <a href="#" class="card-link"
                     onclick="handleClick(event, 'https://vandandalvi.github.io/My-projects/image-resizer-main-20241117T092635Z-001/image-resizer-main/foodcolarie.html')">
@@ -582,7 +646,7 @@
                 <div>
                     <i class="fa-solid fa-hand-scissors card-icon"></i>
                     <h2 class="card-title">Rock Paper Scissors</h2>
-                    <p class="card-description">Play the classic game online</p>
+                    <p class="card-description">Interactive browser-based version of the classic hand game with smooth animations, score tracking, and an engaging user interface.</p>
                 </div>
                 <a href="#" class="card-link"
                     onclick="handleClick(event, 'https://vandandalvi.github.io/Games/games/functions.html')">
@@ -597,7 +661,7 @@
                 <div>
                     <i class="fas fa-rocket card-icon"></i>
                     <h2 class="card-title">Coming Soon</h2>
-                    <p class="card-description">New exciting project under development</p>
+                    <p class="card-description">Exciting new project currently in development. Stay tuned for innovative features and groundbreaking functionality coming your way.</p>
                 </div>
                 <a href="#" class="card-link" onclick="handleClick(event, '#')"
                     style="background: linear-gradient(to right, #6c757d, #495057);">
