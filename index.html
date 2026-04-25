@@ -19,6 +19,10 @@
             --dark-color: #212529;
             --success-color: #4cc9f0;
             --warning-color: #f72585;
+            --surface-glass: rgba(255, 255, 255, 0.06);
+            --surface-border: rgba(255, 255, 255, 0.14);
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --shadow-strong: 0 18px 40px rgba(0, 0, 0, 0.28);
         }
 
         * {
@@ -36,12 +40,22 @@
             flex-direction: column;
             align-items: center;
             padding: 2rem 1rem;
+            overflow-x: hidden;
+            position: relative;
         }
 
         .header {
             text-align: center;
             margin-bottom: 3rem;
             animation: fadeIn 1s ease;
+            width: 100%;
+            max-width: 1200px;
+            background: var(--surface-glass);
+            border: 1px solid var(--surface-border);
+            backdrop-filter: blur(10px);
+            border-radius: 18px;
+            padding: 1.4rem 1rem 1.2rem;
+            box-shadow: var(--shadow-soft);
         }
 
         .header h1 {
@@ -61,6 +75,74 @@
             margin: 0 auto;
         }
 
+        .social-links {
+            margin-top: 0.9rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 600;
+            padding: 0.4em 1em;
+            border-radius: 1.2em;
+            transition: transform 0.15s, box-shadow 0.15s;
+            letter-spacing: 0.03em;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.14);
+        }
+
+        .social-btn i {
+            font-size: 1.3em;
+            margin-right: 0.5em;
+            vertical-align: middle;
+        }
+
+        .social-btn--github {
+            background: linear-gradient(90deg, #384042 0%, #11808f 100%);
+            box-shadow: 0 2px 12px 0 rgba(72, 0, 139, 0.13);
+        }
+
+        .social-btn--github:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px 0 rgba(72, 0, 139, 0.18);
+        }
+
+        .social-btn--linkedin {
+            background: linear-gradient(90deg, #0077b5 0%, #00a0dc 100%);
+            box-shadow: 0 2px 12px 0 rgba(0, 119, 181, 0.13);
+        }
+
+        .social-btn--linkedin:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px 0 rgba(0, 119, 181, 0.25);
+        }
+
+        .social-btn--hire {
+            background: linear-gradient(90deg, #7209b7 0%, #f72585 100%);
+            box-shadow: 0 2px 12px 0 rgba(114, 9, 183, 0.2);
+        }
+
+        .social-btn--hire:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px 0 rgba(114, 9, 183, 0.3);
+        }
+
+        .social-btn--portfolio {
+            background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%);
+            box-shadow: 0 2px 12px 0 rgba(245, 158, 11, 0.2);
+        }
+
+        .social-btn--portfolio:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px 0 rgba(245, 158, 11, 0.3);
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -71,21 +153,22 @@
         }
 
         .project-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--surface-glass);
             border-radius: 16px;
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--surface-border);
             overflow: hidden;
             transition: all 0.4s ease;
             position: relative;
             display: flex;
             flex-direction: column;
             min-height: 200px;
+            box-shadow: var(--shadow-soft);
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px) scale(1.01);
+            box-shadow: var(--shadow-strong);
             border-color: rgba(255, 255, 255, 0.2);
         }
 
@@ -115,18 +198,28 @@
             font-size: 2rem;
             margin-bottom: 1rem;
             color: var(--success-color);
+            background: rgba(76, 201, 240, 0.12);
+            width: 3rem;
+            height: 3rem;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(76, 201, 240, 0.22);
         }
 
         .card-title {
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
 
         .card-description {
             font-size: 0.9rem;
             opacity: 0.7;
             margin-bottom: 1rem;
+            line-height: 1.55;
         }
 
         .card-link {
@@ -145,8 +238,17 @@
             margin-top: 1rem;
         }
 
+        .card-link--talkito {
+            background: linear-gradient(to right, #ff6b6b, #ee5a6f);
+        }
+
+        .card-link--coming {
+            background: linear-gradient(to right, #6c757d, #495057);
+        }
+
         .card-link:hover {
             box-shadow: 0 5px 15px rgba(114, 9, 183, 0.4);
+            transform: translateY(-2px);
         }
 
         .card-link:active {
@@ -190,6 +292,8 @@
             color: white;
             font-size: 1.2rem;
             transition: all 0.3s;
+            z-index: 3;
+            box-shadow: var(--shadow-soft);
         }
 
         .theme-toggle:hover {
@@ -337,6 +441,11 @@
                 gap: 1rem;
             }
 
+            .header {
+                padding: 1rem 0.7rem;
+                margin-bottom: 1.8rem;
+            }
+
             .header h1 {
                 font-size: 2rem;
             }
@@ -352,6 +461,8 @@
             .card-icon {
                 font-size: 1.7rem;
                 margin-bottom: 0.7rem;
+                width: 2.6rem;
+                height: 2.6rem;
             }
 
             .card-title {
@@ -375,6 +486,10 @@
             .header h1 {
                 font-size: 1.7rem;
             }
+
+            .social-links {
+                gap: 0.4rem;
+            }
         }
 
         /* Dark/Light theme variables */
@@ -386,6 +501,11 @@
         body.light-theme .project-card {
             background: rgba(255, 255, 255, 0.5);
             border-color: rgba(0, 0, 0, 0.05);
+        }
+
+        body.light-theme .header {
+            background: rgba(255, 255, 255, 0.65);
+            border-color: rgba(0, 0, 0, 0.08);
         }
 
         body.light-theme .card-description {
@@ -420,6 +540,13 @@
             background: rgba(0, 0, 0, 0.1);
             color: var(--dark-color);
         }
+
+        .social-btn:focus-visible,
+        .card-link:focus-visible,
+        .theme-toggle:focus-visible {
+            outline: 2px solid #93c5fd;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 
@@ -432,94 +559,22 @@
         <h1>My Projects Hub</h1>
         <p>A collection of applications I developed over 4 years of study.</p>
         <p>(Only WebProjects)</p>
-    <p>
-        <a href="https://github.com/vandandalvi" target="_blank" 
-           style="
-                display: inline-flex;
-                align-items: center;
-                background: linear-gradient(90deg, #384042 0%, #11808f 100%);
-                color: #fff;
-                text-decoration: none;
-                font-size: 1em;
-                font-weight: 600;
-                padding: 0.4em 1em;
-                border-radius: 1.2em;
-                box-shadow: 0 2px 12px 0 rgba(72, 0, 139, 0.13);
-                transition: transform 0.15s, box-shadow 0.15s;
-                margin: 0.7em 0.5em 0 0;
-                letter-spacing: 0.03em;
-            "
-           onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 16px 0 rgba(72,0,139,0.18)';"
-           onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px 0 rgba(72,0,139,0.13)';"
-        >
-            <i class="fab fa-github" style="font-size: 1.3em; margin-right: 0.5em; vertical-align: middle;"></i>
-            <span style="vertical-align: middle;">GitHub</span>
+    <p class="social-links">
+        <a href="https://github.com/vandandalvi" target="_blank" class="social-btn social-btn--github">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
         </a>
-        <a href="https://www.linkedin.com/in/vandandalvi/" target="_blank" 
-           style="
-                display: inline-flex;
-                align-items: center;
-                background: linear-gradient(90deg, #0077b5 0%, #00a0dc 100%);
-                color: #fff;
-                text-decoration: none;
-                font-size: 1em;
-                font-weight: 600;
-                padding: 0.4em 1em;
-                border-radius: 1.2em;
-                box-shadow: 0 2px 12px 0 rgba(0, 119, 181, 0.13);
-                transition: transform 0.15s, box-shadow 0.15s;
-                margin: 0.7em 0.5em 0 0;
-                letter-spacing: 0.03em;
-            "
-           onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 16px 0 rgba(0,119,181,0.25)';"
-           onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px 0 rgba(0,119,181,0.13)';"
-        >
-            <i class="fab fa-linkedin" style="font-size: 1.3em; margin-right: 0.5em; vertical-align: middle;"></i>
-            <span style="vertical-align: middle;">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/vandandalvi/" target="_blank" class="social-btn social-btn--linkedin">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
         </a>
-        <a href="https://www.vandandalvi.me/" target="_blank" 
-           style="
-                display: inline-flex;
-                align-items: center;
-                background: linear-gradient(90deg, #7209b7 0%, #f72585 100%);
-                color: #fff;
-                text-decoration: none;
-                font-size: 1em;
-                font-weight: 600;
-                padding: 0.4em 1em;
-                border-radius: 1.2em;
-                box-shadow: 0 2px 12px 0 rgba(114, 9, 183, 0.2);
-                transition: transform 0.15s, box-shadow 0.15s;
-                margin: 0.7em 0.5em 0 0;
-                letter-spacing: 0.03em;
-            "
-           onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 16px 0 rgba(114,9,183,0.3)';"
-           onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px 0 rgba(114,9,183,0.2)';"
-        >
-            <i class="fas fa-laptop-code" style="font-size: 1.3em; margin-right: 0.5em; vertical-align: middle;"></i>
-            <span style="vertical-align: middle;">Hire Me</span>
+        <a href="https://www.vandandalvi.me/" target="_blank" class="social-btn social-btn--hire">
+            <i class="fas fa-laptop-code"></i>
+            <span>Hire Me</span>
         </a>
-        <a href="https://vandansportfolio.vercel.app/" target="_blank" 
-           style="
-                display: inline-flex;
-                align-items: center;
-                background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%);
-                color: #fff;
-                text-decoration: none;
-                font-size: 1em;
-                font-weight: 600;
-                padding: 0.4em 1em;
-                border-radius: 1.2em;
-                box-shadow: 0 2px 12px 0 rgba(245, 158, 11, 0.2);
-                transition: transform 0.15s, box-shadow 0.15s;
-                margin: 0.7em 0 0 0;
-                letter-spacing: 0.03em;
-            "
-           onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 4px 16px 0 rgba(245,158,11,0.3)';"
-           onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 2px 12px 0 rgba(245,158,11,0.2)';"
-        >
-            <i class="fas fa-user-circle" style="font-size: 1.3em; margin-right: 0.5em; vertical-align: middle;"></i>
-            <span style="vertical-align: middle;">Portfolio</span>
+        <a href="https://vandansportfolio.vercel.app/" target="_blank" class="social-btn social-btn--portfolio">
+            <i class="fas fa-user-circle"></i>
+            <span>Portfolio</span>
         </a>
     </p>
     </header>
@@ -534,8 +589,7 @@
                     <span class="project-note project-note--update">Version 5.0 (Zero Latency)</span>
                     <span class="problem-badge-container"><span class="problem-badge">SOLVING REAL-WORLD PROBLEMS</span></span>
                 </div>
-                <a href="#" class="card-link" onclick="handleClick(event, 'https://demotalkito.vercel.app/')"
-                    style="background: linear-gradient(to right, #ff6b6b, #ee5a6f);">
+                <a href="#" class="card-link card-link--talkito" onclick="handleClick(event, 'https://demotalkito.vercel.app/')">
                     View Demo (Under Construction)
                     <span class="loader"></span>
                 </a>
@@ -824,8 +878,7 @@
                     <p class="card-description">Exciting new project currently in development. Stay tuned for innovative features and groundbreaking functionality coming your way.</p>
                     <span class="project-note project-note--basic">Turned off (Basic projects).</span>
                 </div>
-                <a href="#" class="card-link" onclick="handleClick(event, '#')"
-                    style="background: linear-gradient(to right, #6c757d, #495057);">
+                <a href="#" class="card-link card-link--coming" onclick="handleClick(event, '#')">
                     Stay Tuned
                     <span class="loader"></span>
                 </a>
