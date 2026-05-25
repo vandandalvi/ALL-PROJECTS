@@ -3,6 +3,7 @@
 This project is a single-page HTML portfolio that showcases a collection of all my web projects developed over 4 years of study.
 
 ## Why a Single HTML File?
+
 - **Centralized Showcase:** I wanted a single, easy-to-share page where anyone can browse all my major and mini-projects at once.
 - **Simplicity:** No backend, no build tools just open the file and see everything.
 - **Portability:** You can host it anywhere (GitHub Pages, Vercel, Netlify, or even locally) and it will work.
