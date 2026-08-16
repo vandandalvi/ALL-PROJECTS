@@ -1,5 +1,6 @@
 # My Projects Hub ~everything at one place
 
+
 This project is a single-page HTML portfolio that showcases a collection of all my web projects developed over 4 years of study.
 
 ## Why a Single HTML File?
