@@ -743,58 +743,154 @@
 
         @media (max-width: 768px) {
             .top-nav {
-                padding: 0 var(--spacing-md);
+                padding: 0 16px;
                 height: 56px;
             }
             .brand-title {
-                font-size: 12px;
+                font-size: 11px;
                 letter-spacing: 1px;
             }
             .hero-section {
-                padding: var(--spacing-xl) var(--spacing-md);
+                padding: 20px 16px;
+            }
+            .hero-badge-wrap {
+                gap: 8px;
+                margin-bottom: 12px;
+            }
+            .hero-tag {
+                font-size: 10px;
+                padding: 4px 8px;
+                letter-spacing: 1px;
+            }
+            .hero-title {
+                font-size: 28px;
+                margin-bottom: 8px;
+                letter-spacing: 0;
+            }
+            .hero-subtitle {
+                font-size: 13px;
+                line-height: 1.5;
+                margin-bottom: 16px;
             }
             .telemetry-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr) !important; /* Compact 2x2 grid */
                 gap: 1px;
+                margin-bottom: 16px;
             }
             .telemetry-cell {
-                padding: var(--spacing-md);
+                padding: 10px 12px;
+            }
+            .telemetry-val {
+                font-size: 22px;
+            }
+            .telemetry-lbl {
+                font-size: 10px;
+                letter-spacing: 1px;
             }
             .social-links {
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr) !important; /* Compact 2x2 grid for social buttons */
+                gap: 8px;
                 width: 100%;
             }
             .btn-m {
                 width: 100%;
-                justify-content: center;
+                min-height: 42px;
+                padding: 0 10px;
+                font-size: 11px;
+                letter-spacing: 1px;
+                gap: 6px;
             }
             .category-nav-wrapper {
                 top: 56px;
             }
             .category-nav {
-                padding: 0 var(--spacing-md);
-                gap: var(--spacing-lg);
+                padding: 0 16px;
+                gap: 16px;
+            }
+            .category-tab {
+                font-size: 11px;
+                padding: 12px 0;
+                letter-spacing: 1px;
+            }
+            .tab-badge {
+                font-size: 10px;
+                padding: 1px 5px;
             }
             .main-container {
-                padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xxl);
+                padding: 16px 16px 40px;
+            }
+            .section-header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 16px;
+                gap: 8px;
+            }
+            .section-title {
+                font-size: 18px;
+            }
+            .section-count {
+                font-size: 10px;
+                letter-spacing: 1px;
             }
             .projects-grid {
                 grid-template-columns: 1fr;
-                gap: var(--spacing-md);
+                gap: 14px;
+            }
+            .project-card {
+                padding: 16px;
+                min-height: auto;
+            }
+            .card-icon-wrap {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+            .card-category-tag {
+                font-size: 10px;
+                letter-spacing: 1px;
+            }
+            .card-title {
+                font-size: 18px;
+            }
+            .card-description {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+            .card-action {
+                margin-top: 14px;
+                padding-top: 12px;
+            }
+            .card-link {
+                min-height: 42px;
+                font-size: 11px;
+                letter-spacing: 1px;
+                padding: 0 12px;
+            }
+            .footer {
+                padding: 28px 16px 20px;
             }
             .footer-content {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: var(--spacing-md);
+                gap: 12px;
+                margin-bottom: 16px;
+            }
+            .footer-copy {
+                font-size: 11px;
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 380px) {
+            .social-links {
+                grid-template-columns: 1fr !important;
+            }
             .telemetry-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr) !important;
             }
             .hero-title {
-                font-size: 32px;
+                font-size: 24px;
             }
         }
 
